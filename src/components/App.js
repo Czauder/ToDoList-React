@@ -4,6 +4,7 @@ import AddTask from "./AddTask";
 import TaskList from "./TaskList";
 
 class App extends Component {
+  counter = 9;
   state = {
     tasks: [
       {
@@ -11,7 +12,7 @@ class App extends Component {
         text: "zagrać wreszcie w Wiedźmina 3",
         date: "2018-02-15",
         important: true,
-        active: false,
+        active: true,
         finishDate: null
       },
       {
@@ -19,7 +20,7 @@ class App extends Component {
         text: "dostać prace",
         date: "2058-02-15",
         important: true,
-        active: false,
+        active: true,
         finishDate: null
       },
       {
@@ -106,10 +107,29 @@ class App extends Component {
     });
   };
 
+  addTask = (text, date, important) => {
+    // console.log("dodany obiekt");
+    const task = {
+      id: this.counter,
+      text: text, // teskt z imputa
+      date: date, // teskt z imputa
+      important: important, // wartość z imputa
+      active: true,
+      finishDate: null
+    };
+    this.counter++;
+    console.log(task, this.counter);
+
+    this.setState(prevState => ({
+      tasks: [...prevState.tasks, task]
+    }));
+    return true;
+  };
+
   render() {
     return (
       <div className="App">
-        TODO LIST <AddTask />
+        <h1>TODO APP</h1> <AddTask add={this.addTask} />
         <TaskList
           tasks={this.state.tasks}
           delete={this.deleteTask}
