@@ -1,4 +1,5 @@
 import React from "react";
+import "./Task.css";
 
 const Task = props => {
   const style = {
@@ -13,8 +14,12 @@ const Task = props => {
         <p>
           <strong style={important ? style : null}>{text}</strong> - do
           <span> {date} </span>
-          <button onClick={() => props.change(id)}>zostało zrobione</button>
-          <button onClick={() => props.delete(id)}>X</button>
+          <button className="task-button-done" onClick={() => props.change(id)}>
+            zostało zrobione
+          </button>
+          <button className="task-button-x" onClick={() => props.delete(id)}>
+            X
+          </button>
         </p>
       </div>
     );
@@ -27,7 +32,9 @@ const Task = props => {
           <strong>{text} </strong>
           <em>(zrobić do {date})</em>
           <br />- potwierdzenie wykonania <span>{finish}</span>
-          <button onClick={() => props.delete(id)}>X</button>
+          <button className="task-button-x" onClick={() => props.delete(id)}>
+            X
+          </button>
         </p>{" "}
       </div>
     );

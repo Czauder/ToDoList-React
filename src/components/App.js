@@ -9,7 +9,7 @@ class App extends Component {
     tasks: [
       {
         id: 0,
-        text: "zagrać wreszcie w Wiedźmina 3",
+        text: "Zadanie 1",
         date: "2018-02-15",
         important: true,
         active: true,
@@ -17,23 +17,23 @@ class App extends Component {
       },
       {
         id: 1,
-        text: "dostać prace",
-        date: "2058-02-15",
+        text: "Zadanie 2",
+        date: "2008-02-15",
         important: true,
         active: true,
         finishDate: null
       },
       {
         id: 2,
-        text: "zagrać wreszcie",
-        date: "2018-02-15",
+        text: "Zadanie 3",
+        date: "2018-04-15",
         important: true,
         active: true,
         finishDate: null
       },
       {
         id: 3,
-        text: "The Software House",
+        text: "Zadanie 4",
         date: "2018-02-25",
         important: false,
         active: true,
@@ -41,7 +41,7 @@ class App extends Component {
       },
       {
         id: 4,
-        text: "zrobić to do liste",
+        text: "Zadanie 5",
         date: "2018-09-05",
         important: true,
         active: true,
@@ -49,7 +49,7 @@ class App extends Component {
       },
       {
         id: 5,
-        text: "dokoczyć kurs",
+        text: "Zadanie 6",
         date: "2016-12-15",
         important: true,
         active: true,
@@ -57,7 +57,7 @@ class App extends Component {
       },
       {
         id: 6,
-        text: "Piwko",
+        text: "Zadanie 7",
         date: "2018-06-05",
         important: false,
         active: true,
@@ -65,7 +65,7 @@ class App extends Component {
       },
       {
         id: 7,
-        text: "zagrać w fife",
+        text: "Zadanie 8",
         date: "2098-10-15",
         important: false,
         active: true,
@@ -73,7 +73,7 @@ class App extends Component {
       },
       {
         id: 8,
-        text: "dać czadu",
+        text: "Zadanie 9",
         date: "2022-02-15",
         important: false,
         active: true,
@@ -129,7 +129,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>TODO APP</h1> <AddTask add={this.addTask} />
+        <h1> TODO APP </h1> <AddTask add={this.addTask} />
         <TaskList
           tasks={this.state.tasks}
           delete={this.deleteTask}
